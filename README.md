@@ -1,5 +1,7 @@
 # Task Services Worker ⏱️📧
 
+-
+
 Microservicio en segundo plano encargado de la ejecución programada (Cron Worker) para despachar correos electrónicos pendientes mediante **Microsoft 365 (Microsoft Graph API v1.0)**, reemplazando proveedores tradicionales como Brevo.
 
 ## 🎯 Arquitectura y Flujo de Trabajo
@@ -78,9 +80,9 @@ npm run test:email -- tu_correo@dominio.com
 
 ## 📡 Endpoints HTTP
 
-| Método | Endpoint | Descripción |
-|---|---|---|
-| `GET` | `/` | Estado general del servicio y configuración activa |
-| `GET` | `/health` | Healthcheck (uptime, timestamp) |
-| `GET` | `/tasks/status` | Métricas de ejecución (total procesados, enviados, fallidos, duración) |
-| `POST` | `/tasks/trigger` | Disparo manual inmediato del ciclo de despacho |
+| Método | Endpoint         | Descripción                                                            |
+| ------ | ---------------- | ---------------------------------------------------------------------- |
+| `GET`  | `/`              | Estado general del servicio y configuración activa                     |
+| `GET`  | `/health`        | Healthcheck (uptime, timestamp)                                        |
+| `GET`  | `/tasks/status`  | Métricas de ejecución (total procesados, enviados, fallidos, duración) |
+| `POST` | `/tasks/trigger` | Disparo manual inmediato del ciclo de despacho                         |
